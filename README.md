@@ -1,22 +1,22 @@
 # Taiwan Quant beta
 ## 簡介
 此為台灣股票回測平台，由TMBA 19th程式交易部合力完成，透過撰寫expression產生回測訊號，共有以下檔案(data放置於雲端硬碟中)：
-  * [**alpha_platform_beta**](https://github.com/Andy-Liu66/TMBA_pair_trading_module/blob/master/Taiwan%20Quant%20beta/alpha_platform_beta.py):
+  * [**alpha_platform_beta**](https://github.com/neal8891214/Alpha_platform/blob/master/alpha_platform_beta.py):
     
 	  存放主要程式碼
-  * [**Operators**](https://github.com/Andy-Liu66/TMBA_pair_trading_module/tree/master/Taiwan%20Quant%20beta/Operators):
+  * [**Operators**](https://github.com/neal8891214/Alpha_platform/tree/master/Operators):
   
  	  存放撰寫expression的Operators
-  * [**basic_tool**](https://github.com/Andy-Liu66/TMBA_pair_trading_module/blob/master/Taiwan%20Quant%20beta/basic_tool.py):
+  * [**basic_tool**](https://github.com/neal8891214/Alpha_platform/blob/master/basic_tool.py):
     
 	  存放策略撰寫過程所需function
-  * [**Alpha_plot**](https://github.com/Andy-Liu66/TMBA_pair_trading_module/blob/master/Taiwan%20Quant%20beta/Alpha_plot.py):
+  * [**Alpha_plot**](https://github.com/neal8891214/Alpha_platform/blob/master/Alpha_plot.py):
   
     存放績效視覺化class
-  * [**help**](https://github.com/Andy-Liu66/TMBA_pair_trading_module/tree/master/Taiwan%20Quant%20beta/help):
+  * [**help**](https://github.com/neal8891214/Alpha_platform/tree/master/help):
   
     存放損益計算方式說明
-  * [**example**](https://github.com/Andy-Liu66/TMBA_pair_trading_module/blob/master/Taiwan%20Quant%20beta/example.ipynb)
+  * [**example**](https://github.com/neal8891214/Alpha_platform/blob/master/example.ipynb)
    
     存放Demo檔
 ## 要求
@@ -124,7 +124,7 @@ plot_sharpe_ratio_return(alpha_platform=test_platform)
 * 權重在撰寫expression中生成，由於權重產生後會乘以initial cash得到該股票被分配的金額，接著再依據此金額除以其收盤價決定股數，程式中會判斷若權重相同則沿用首次出現此權重的股數(與最初版本方式不同)，目的是在權重相同的情況下，不會因為收盤價的變動而出現更改股數的狀況，會導致過於頻繁的重新平衡，而產生過多交易成本。
 * 資料若為低頻資料，如季報資料，則在公布後至下次公布前都會是相同值，所以若使用這類型資料產生權重，則權重理應會相同，延續第一點邏輯則不會有部位更動，直到下次有新值產生後才會重新平衡。
 * 目前由開盤價計算損益，亦即假設在收盤決定權重後，以當日開盤價作為成本價，與下次平衡時的開盤價進行比較計算績效(但權重產生是在開盤後，不見得買的到開盤價)。
-* 獲利計算方式與help資料夾中的[excel檔](https://github.com/Andy-Liu66/TMBA_pair_trading_module/tree/master/Taiwan%20Quant%20beta/help)舉例相同邏輯。
+* 獲利計算方式與help資料夾中的[excel檔](https://github.com/neal8891214/Alpha_platform/tree/master/help)舉例相同邏輯。
 * 寫expression若有問題，當中有用except去抓error的原因，較好debug。
 * 目前尚未考量融券成本。
 * Operators基本上輸入向量回傳向量，在撰寫expression過程中應該不會有太大問題。
