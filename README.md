@@ -141,7 +141,7 @@ plot_sharpe_ratio_return(alpha_platform=test_platform)
 ## Feedback
 欲修改code歡迎直接送pull request。
 
-## 共同開發人員
+## 共同開發人員(TMBA 18 & 19th 程式交易部)
 	andy566159@gmail.com
 	gaho8435@gmail.com
 	ioyu92185@gmail.com 
