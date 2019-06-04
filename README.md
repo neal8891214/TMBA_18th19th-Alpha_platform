@@ -1,4 +1,19 @@
 # Taiwan Quant beta
+
+## 共同開發人員
+andy566159@gmail.com
+gaho8435@gmail.com
+ioyu92185@gmail.com 
+jasonchen870205@gmail.com
+jj255129@gmail.com
+justinho861128@gmail.com
+monkeyboy9966@gmail.com
+neal8891214@gmail.com
+W5385928@gmail.com
+xj4william@gmail.com
+yuan850107@gmail.com
+yuying990718@gmail.com
+
 ## 簡介
 此為台灣股票回測平台，由TMBA 19th程式交易部合力完成，透過撰寫expression產生回測訊號，共有以下檔案(data放置於雲端硬碟中)：
   * [**alpha_platform_beta**](https://github.com/neal8891214/Alpha_platform/blob/master/alpha_platform_beta.py):
